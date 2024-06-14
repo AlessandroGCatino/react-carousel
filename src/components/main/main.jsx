@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import style from './main.module.scss';
 import Card from '../card.jsx'
 import { IoArrowBackCircle, IoArrowForwardCircle } from "react-icons/io5";
@@ -29,6 +29,10 @@ const Main = () => {
         setCurrentPost(index);
     };
 
+    useEffect(() => {
+        const interval = setInterval(handleForward, 2000);
+        return () => clearInterval(interval);
+      }, [currentPost]);
 
     return (
         <div className={style.mainBackground}>

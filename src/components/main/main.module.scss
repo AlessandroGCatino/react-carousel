@@ -1,0 +1,96 @@
+.red{
+    background-color: #e34f26;
+}
+
+.blue {
+    background-color: #264de4;
+}
+
+.sand{
+    background-color: #f1e05a;
+}
+
+.purple{
+    background-color: #777bb3;
+}
+
+.default {
+    background-color: lightgreen;
+}
+
+.arrows{
+    font-size: 2rem;
+}
+
+.mainBackground{
+    background-color: whitesmoke;
+    padding: 15px;
+    height: 80%;
+    &>div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+}
+
+.card{
+    background-color: lightgrey;
+    width: 30%;
+    border-radius: 20px;
+    &:hover{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+    .tags{
+        & span{
+            margin-right: 10px;
+            padding: 5px 10px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.cardImage{
+    margin: 0;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+.cardImage img{
+    width: 100%
+}
+
+.cardDesc{
+    padding: 0 20px 20px 20px;
+}
+
+.readMore{
+    background-color: #DAA521;
+    color: white;
+    border: 0;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.bullets{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .card{
+        width: calc(100%/2 - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card{
+        width: 100%;
+    }
+}
